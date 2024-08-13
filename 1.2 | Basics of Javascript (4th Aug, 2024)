@@ -1,0 +1,138 @@
+// function sum(num1,num2){
+//   return num1+num2;
+// }
+
+// let ans = sum("1","2");
+// console.log(ans);
+
+// function canVote(age){
+//   if(age<18) return true;
+//   else return false;
+// }
+
+// let res = canVote(16);
+// console.log(res);
+
+// -------------------------------------------------------------------------------------------
+
+// // Problem : Write a function that takes a user as an input and greets them with their name and age.
+// // user object
+// let user = {
+//   name : "Kundan",
+//   age : 24
+// }
+
+// // function to greet
+// function greet(user){
+//   let ans = "Welcome our guest with name as " + user.name + " with age as " + user.age + ".";
+//   return ans;
+// }
+
+// // calling function
+// let res = greet(user);
+// console.log(res);
+
+// -------------------------------------------------------------------------------------------
+
+// // Problem : Write a function that takes a new object as input which has name , age  and gender and greets the user with their gender (Hi Mr/Mrs/Others harkirat, your age is 21)
+// // Object user made.
+// let user = {
+//   name : "Kundan",
+//   age : 24,
+//   gender : "Male"
+// }
+
+// // function to greet
+// function greet(user){
+//   let res;
+//   if(user.gender == "Male") res = "Hi Mr. " + user.name + ", your age is " + user.age;
+//   else res = "Hi Mrs. " + user.name + ", your age is " + user.age;
+//   return res;
+// }
+
+// // calling the function
+// let ans = greet(user);
+// console.log(ans);
+
+// -------------------------------------------------------------------------------------------
+
+// // Problem : Write a function that takes a new object as input which has name , age  and gender and greets the user with their gender (Hi Mr/Mrs/Others harkirat, your age is 21) and also tell user if they are legal to vote or not.
+
+// // Object user made.
+// let user = {
+//   name : "Kundan",
+//   age : 24,
+//   gender : "Male"
+// }
+
+// // function to greet
+// function greet(user){
+//   let res;
+//   if(user.gender == "Male") res = "Hi Mr. " + user.name + ", your age is " + user.age;
+//   else res = "Hi Mrs. " + user.name + ", your age is " + user.age;
+
+//   if(user.age > 18) res = res + " and you are legal to vote.";
+//   else res = res + " and you are not legel to vote."
+//   return res;
+// }
+
+// // calling the function
+// let ans = greet(user);
+// console.log(ans);
+
+// // Array of object
+// const users = [{
+//   name: "Harkirat",
+//   age: 21
+// }, {
+//   name: "raman",
+//   age: 22
+// }
+// ]
+
+// console.log(users[0]);
+// console.log(users[0].age);
+
+// ------------------------------------------------------------------------------------------
+
+// // Write a function that takes an array of users as inputs and returns only the users who are more than 18 years old
+
+// // array of object : users array hai objects ka.
+// let users = [{
+//     name : "Kundan",
+//     age : 24
+//   },{
+//     name : "preeti",
+//     age : 24
+//   },{
+//     name : "prem",
+//     age : 16
+//   }
+// ]
+
+// function printAdults(user){
+//   let ans=[];
+//   for(let i=0;i<users.length;i++){
+//     if(user[i].age > 18) ans.push(users[i].name);
+//     }
+//   return ans;
+// }
+
+// let res = printAdults(users);
+// console.log(res);
+
+// ------------------------------------------------------------------------------------------
+
+// // Object of Objects
+
+// const user1 = {
+//   name: "harkirat",
+//   age: 19,
+//   address: {
+//     city: "Delhi",
+//     country: "India",
+//     address: "1122 DLF"
+//   }
+// }
+
+// const city = user1.address.city;
