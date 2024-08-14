@@ -1,0 +1,114 @@
+// for better notes understanding paste this code with prompt "Make notes of this ".
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+function sum(a,b){
+  return a+b;
+}
+
+let ans = sum(2,3);
+console.log(ans);
+
+// ----------------------------------------------------------------------------------------------------------------
+
+function sum(n){
+  let sum=0;
+  for(let i=0;i<=n;i++){
+    sum+=i;
+  }
+  return sum; 
+}
+
+let res = sum(5);
+console.log(res);
+
+// advance folks assgin : try to create a promisified version of setTimeout, fetch, fs.readFile.
+
+// ----------------------------------------------------------------------------------------------------------------
+
+// fs.readFile
+const fs = require('fs');
+
+const data = fs.readFileSync("a.txt", "utf-8");
+console.log(data);
+
+// ** the file i read can be presented in many format or encoding utf-8 is one which we human easily understand so we tell to read file synchronusly in utf-8 encoding.
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Read from two files
+const fs = require('fs');
+
+const data = fs.readFileSync("a.txt", "utf-8");
+console.log(data);
+
+const data1 = fs.readFileSync("b.txt", "utf-8");
+console.log(data1);
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Functional Arguments : Passing a function to another function as an argument.
+
+function sum(a,b){
+  return a+b;
+}
+
+function subtract(a,b){
+  return a-b;
+}
+
+function multiply(a,b){
+  return a*b;
+}
+
+function divide(a,b){
+  return a/b;
+}
+
+function doOp(a, b, op){
+  return op(a,b);
+}
+
+console.log(doOp(3,4,sum));
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Async Js
+const fs = require('fs');
+
+function print(err,data){
+  if(err){
+    console.log("File not found");
+  } else{
+    console.log(data);
+  }
+}
+
+fs.readFile("a.txt", "utf-8", print); // asynchornously
+
+fs.readFile("b.txt", "utf-8", print); // asynchornously
+
+console.log("Done kar diya");
+
+// ** print, here is a callback function, it call backs the function print.
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// For better Visulization run this async code snippet on http://latentflip.com/loupe
+
+function timeout(){
+  console.log("Hello there");
+}
+
+console.log("HI THERE");
+
+setTimeout(timeout, 1000);
+
+console.log("Welcome to Async JS");
+
+let c=0;
+for(let i=1;i<=10000000000;i++){
+  c+=1;
+}
+
+console.log("expensive op done");
